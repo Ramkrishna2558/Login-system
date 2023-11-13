@@ -35,6 +35,7 @@
 
             <button type="submit">Login</button>
             <button id="registerButton" onclick="showRegistrationForm()">Register User</button>
+            <a href="#" onclick="showForgotPasswordForm()">Forgot Password?</a>
 
         </form>
 
@@ -57,12 +58,29 @@
                 <option id="option" value="birth-place">What is your birth place?</option>
                 <option id="option" value="middle-name">What is your middle name?</option>
             </select>
-<input type="selected">
+
+            <label for="registration-security-answer">Security Answer:</label>
+            <input type="text" id="registration-security-answer" required>
             <button type="submit">Register</button>
             <button id="regLoginButton" onclick="showLoginForm()">Login Now</button>
 
         </form>
     </div>
+    <div id="forgotPasswordForm" style="display: none;">
+        <h2>Forgot Password</h2>
+        <div>
+            <label for="forgotUsername">Username:</label>
+            <br>
+        <input type="text" id="forgotUsername" required>
+    <br/>
+    <label for="security-answer">Security Answer:</label>
+    <br>
+        <input type="text" id="security-answer" required>
+        <br/>
+        <button type="button" onclick="recoverPassword()">Recover Password</button>
+        </div>
+    </div>
+    
     <div class="sidebar" id="mySidebar">
         
         <ul>

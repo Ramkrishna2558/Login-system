@@ -56,7 +56,7 @@ nav ul li {
 
 
 #login-container,
-#registration-container {
+#registration-container{
     background-color: #427D9D;
     border: 1px solid #ccc;
     padding: 60px 20px; 
@@ -77,7 +77,8 @@ nav ul li {
 #registration-container {
     margin-bottom: 30%;
 }
-form {
+form
+ {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -131,6 +132,52 @@ h2 {
     background-color:#9BBEC8 ;
 
 }
+
+
+#forgotPasswordForm {
+    background-color: #427D9D;
+    border: 1px solid #ccc;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 22px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10% 30%;
+}
+
+#forgotPasswordForm h2 {
+    margin-top: 0;
+    justify-content: center;
+}
+
+#forgotPasswordForm label {
+    margin: 5px;
+    font-weight: bold;
+    
+}
+
+#forgotPasswordForm input {
+    background-color: #9BBEC8;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 2%;
+}
+
+#forgotPasswordForm button {
+    padding: 10px;
+    background-color: #164863;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: auto;
+}
+
+#forgotPasswordForm button:hover {
+    background-color: #9BBEC8;
+}
+
 
 /* sidebar  */
 
