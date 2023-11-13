@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Home.css">
+</head>
+<body>
+
+    <header>
+       <div class="leftheaditems">
+        <button class="toggle-btn" onclick="toggleSidebar()">
+            <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/000000/menu--v3.png" alt="menu--v3"/>        
+        </button> 
+        <!-- <h1 class="Page">MY PAGE </h1> -->
+
+        <h1 id="Heading"> Dashboard</h1>
+       </div>
+        <nav id="navbar">
+            <ul id="navul">
+                <li onclick="login()">Login</li>
+                <li onclick="logout()">Logout</li>
+                <li onclick="showRegistrationForm()">Register</li>
+            </ul>
+        </nav>
+    </header>
+
+
+            <!-- Sidebar -->
+    <div class="sidebar" id="mySidebar">
+        <!-- <h2>Hello</h2> -->
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li onclick="logout()"><a href="#">Logout</a></li>
+           
+        </ul>
+    </div>
+
+
+       
+
+    <main>
+        <div class="Maincontent">
+            <!-- <h3>Hey There, </h3> -->
+            <!-- <p></p> -->
+            
+        </div>
+                       
+       
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Made By Ramkrishna More</p>
+    </footer>
+
+    <script src="Home.js"></script>
+</body>
+</html>

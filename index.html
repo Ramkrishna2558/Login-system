@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="leftheaditems">
+         <button class="toggle-btn" onclick="toggleSidebar()">
+             <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/000000/menu--v3.png" alt="menu--v3"/>        
+         </button> 
+ 
+        </div>
+         <nav id="navbar">
+             <ul id="navul">
+                 <!-- <li onclick="login()">Login</li>
+                 <li onclick="showRegistrationForm()">Register</li> -->
+             </ul>
+         </nav>
+     </header>
+ 
+
+    <div id="login-container">
+        
+        <form id="login-form">
+            <h2>LOGIN</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <button type="submit">Login</button>
+            <button id="registerButton" onclick="showRegistrationForm()">Register User</button>
+
+        </form>
+
+    </div>
+
+    <div id="registration-container" style="display: none;">
+        <h2>REGISTER</h2>
+        <form id="registration-form">
+            <label for="new-username">New Username:</label>
+            <input type="text" id="new-username" required>
+
+            <label for="new-password">New Password:</label>
+            <input type="password" id="new-password" required>
+
+            <label for="security-question">Security Question:</label>
+            <select id="security-question" required>
+                <option id="option" value="" disabled selected>Select a security question</option>
+                <option id="option" value="last-name">What is your last name?</option>
+                <option id="option" value="pet-name">What is your pet's name?</option>
+                <option id="option" value="birth-place">What is your birth place?</option>
+                <option id="option" value="middle-name">What is your middle name?</option>
+            </select>
+<input type="selected">
+            <button type="submit">Register</button>
+            <button id="regLoginButton" onclick="showLoginForm()">Login Now</button>
+
+        </form>
+    </div>
+    <div class="sidebar" id="mySidebar">
+        
+        <ul>
+            <li><a href="./Pages/Home.html">Home</a></li>
+          
+            <li onclick="showRegistrationForm()"><a href="#">Create Account</a></li>
+          
+            <li onclick="showLoginForm()"><a href="#">Login</a></li>
+            
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <footer>
+        <p>&copy; 2023 Made By Ramkrishna More</p>
+    </footer>
+    <script src="index.js"></script>
+
+</body>
+</html>
