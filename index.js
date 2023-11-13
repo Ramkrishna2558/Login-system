@@ -32,11 +32,15 @@ document.addEventListener('DOMContentLoaded', function () {
 // registration and login forms javascript 
 function showRegistrationForm() {
     document.getElementById('login-container').style.display = 'none';
+    document.getElementById('forgotPasswordForm').style.display = 'none';
+
     document.getElementById('registration-container').style.display = 'block';
 }
 
 function showLoginForm() {
     document.getElementById('registration-container').style.display = 'none';
+    document.getElementById('forgotPasswordForm').style.display = 'none';
+
     document.getElementById('login-container').style.display = 'block';
 }
 

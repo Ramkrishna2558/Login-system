@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Garamond', sans-serif;
     background-color: #9BBEC8;
     margin: 0;
     padding: 0;
@@ -35,8 +35,11 @@ header {
     position: fixed; 
     top: 10px; 
     left: 25px; 
+    margin-bottom: 10px;
     z-index: 4; 
     font-size: 8px;
+    transition: 0.5s ease-in-out;
+
 }
 
 /* Navbar in header */
@@ -47,7 +50,7 @@ header {
 
 nav ul li {
     font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Garamond', sans-serif;
     cursor: pointer;
     margin-right: 15px;
 }
@@ -59,14 +62,16 @@ nav ul li {
 #registration-container{
     background-color: #427D9D;
     border: 1px solid #ccc;
-    padding: 60px 20px; 
+    padding: 60px 40px; 
     display: flex;
     justify-content: center;
     align-items: flex-start;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin: 5% 30%; 
+    margin: 2% 30% 10% 30%;
+    position: relative;
+     
 }
 #login-container h2,
 #registration-container h2 {
@@ -75,7 +80,9 @@ nav ul li {
 }
 
 #registration-container {
-    margin-bottom: 30%;
+    padding-bottom: 60pt;
+    bottom: 10px;
+
 }
 form
  {
@@ -85,6 +92,15 @@ form
     justify-content: space-around;
 }
 
+#login-form a{
+    color: #fff;
+}
+#login-form a:hover {
+    color: #bb2649;
+    font-weight: bold;
+    transition: 0.5s ease-in-out;
+
+}
 label {
     font-weight: bold;
 }
@@ -103,15 +119,20 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    
     margin-bottom: auto;
 }
 
 
 #registerButton:hover{
     background-color:#9BBEC8 ;
+    transition: 0.5s ease-in-out;
+
 }
 button:hover {
     background-color:#9BBEC8 ;
+    transition: 0.5s ease-in-out;
+
 }
 
 #registration-container {
@@ -130,6 +151,8 @@ h2 {
 }
 #regLoginButton:hover {
     background-color:#9BBEC8 ;
+    transition: 0.5s ease-in-out;
+
 
 }
 
@@ -144,6 +167,7 @@ h2 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin: 10% 30%;
+
 }
 
 #forgotPasswordForm h2 {
@@ -154,7 +178,7 @@ h2 {
 #forgotPasswordForm label {
     margin: 5px;
     font-weight: bold;
-    
+
 }
 
 #forgotPasswordForm input {
@@ -221,15 +245,22 @@ h2 {
 #mySidebar ul li{
     font-size: 14px;
     margin-top: 40px;
+    list-style-type: none;
 }
 
 
 ul li a {
     text-decoration: none;
     color: rgb(56, 61, 65);
-    font-family: Arial;
+    font-family: 'Garamond', sans-serif;
     font-weight: bolder;
-    transition: 0.5s ease-in-out;
+    
+
+}
+ul li a:hover {
+   transition: 0.5 ease-in-out;
+   color: #9BBEC8;
+
 }
 hr {
     color: #fff;
@@ -266,4 +297,15 @@ footer {
 
 #security-question select option {
     padding: 10px !important; 
+}
+
+@media only screen and (max-width: 768px) {
+    #login-container,
+    #registration-container,
+    #forgotPasswordForm{
+     
+        margin: 2% 10% 10% 10%;
+       
+        
+}
 }

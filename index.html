@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.cdnfonts.com/css/garamond" rel="stylesheet">
+                
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Get Started</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -16,8 +18,8 @@
         </div>
          <nav id="navbar">
              <ul id="navul">
-                 <!-- <li onclick="login()">Login</li>
-                 <li onclick="showRegistrationForm()">Register</li> -->
+                 <li onclick="login()"></li>
+                 <li onclick="showRegistrationForm()"></li>
              </ul>
          </nav>
      </header>
@@ -84,13 +86,19 @@
     <div class="sidebar" id="mySidebar">
         
         <ul>
-            <li><a href="./Pages/Home.html">Home</a></li>
+            <li><img width="24" height="24" src="https://img.icons8.com/fluency-systems-regular/48/000000/home--v1.png" alt="home--v1"/><a href="./Pages/Home.html">Home</a></li>
           
-            <li onclick="showRegistrationForm()"><a href="#">Create Account</a></li>
+            <li onclick="showRegistrationForm()">
+                <img width="24" height="24" src="https://img.icons8.com/fluency-systems-regular/48/000000/create-new.png" alt="create-new"/>
+                <a href="#">Create Account</a></li>
           
-            <li onclick="showLoginForm()"><a href="#">Login</a></li>
+            <li onclick="showLoginForm()">
+                <img width="24" height="24" src="https://img.icons8.com/fluency-systems-regular/24/000000/login-rounded-right.png" alt="login-rounded-right"/>
+                <a href="#">Login</a></li>
             
-            <li><a href="#">Contact</a></li>
+            <li>
+                <img width="24" height="24" src="https://img.icons8.com/fluency-systems-regular/48/000000/group-task.png" alt="group-task"/>
+                <a href="#">Contact</a></li>
         </ul>
     </div>
     <footer>

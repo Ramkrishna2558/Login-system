@@ -5,7 +5,7 @@ body, h1, p, button {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Garamond', sans-serif;
     font-size: 16px;
     margin: 0;
     background-color: #DDF2FD;
@@ -18,7 +18,7 @@ header {
     padding: 0px;
     display: flex;
     justify-content: space-between;
-
+    z-index: 10;
 }
 
 
@@ -30,6 +30,7 @@ h1 {
     text-align: left;
     line-height: 20px;
     margin-top: 30px;
+    margin-left: 6rem;
 
 }
 
@@ -47,8 +48,8 @@ h1 {
 display: flex;
 
 }
-
 #mySidebar {
+    z-index: 3;
     border-radius: 4%;
     width: 250px; 
     transition: 0.5s;
@@ -57,25 +58,38 @@ display: flex;
     height: 100%;
     position: fixed; 
     left: -22px; 
-    top: 85px; 
+    top: 0px; 
 }
 
-#mySidebar h2 ul li a {
+#mySidebar ul {
+    margin-top: 180px;
+    margin-left: 20px;
+}
+#mySidebar ul li a {
     margin-left: 12px;
+    font-size: 14px;
+    margin-top: 40px;
+    color: fff;
 }
-
 
 
 .sidebar li {
     text-transform: uppercase;
     color: #164863;
+    
 }
 
 .sidebar {
     margin-left: 12px;
 
- 
 }
+
+#mySidebar ul li{
+    font-size: 14px;
+    margin-top: 40px;
+    list-style-type: none;
+}
+
 
 .content {
     margin-left: 0;
@@ -90,19 +104,28 @@ display: flex;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bolder;
-    font-size: large;
+    font-size: 40px;
     margin-top: 33px;
-}
-.toggle-btn {
+    width: 30%;
     
-    top: 40px;
-    left: 20px;
-    border: none;
-background-color: #164863;
-    padding: 6px;
-    font-size: 8px;
 }
+/* toggle switch  */
+.toggle-btn {
+    justify-content: flex-start; 
+    display: flex;
+    border-radius: 12px;
+    border: none;
+    background-color: #427D9D;
+    padding: 6px;
+    position: fixed; 
+    top: 20px; 
+    left: 25px; 
+    margin-bottom: 6px;
+    z-index: 4; 
+    font-size: 8px;
+    transition: 0.5s ease-in-out;
 
+}
 
 /* Navigation Styles */
 
@@ -110,12 +133,17 @@ background-color: #164863;
 #navul {
     list-style: none;
     display: flex;
+
 }
 
+#navul :hover{
+    transition: 0.5s ease-in-out;
+    color:#9BBEC8;
+}
 nav ul li {
     padding: 10px;
     font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Garamond', sans-serif;
     cursor: pointer;
     margin-right: 15px;
 }
@@ -145,18 +173,19 @@ nav ul li {
 ul li {
     font-size: 14px;
     margin-top: 17px;
+    list-style-type: none;
 }
 
 ul li a {
     text-decoration: none;
     color: rgb(56, 61, 65);
-    font-family: Arial;
+    font-family: 'Garamond', sans-serif;
     font-weight: bold;
     transition: 0.5s ease-in-out;
 }
 
 ul li a:hover {
-    color: greenyellow;
+    color: #9BBEC8;
 }
 
 /* Main Content Styles */
@@ -167,9 +196,10 @@ main {
 
 /* Footer Styles */
 footer {
+    z-index: 2;
     position: fixed;
     bottom: 0;
-    background-color: #9BBEC8;
+    background-color: #164863;
     color: #fff;
     text-align: center;
     padding: 10px;
