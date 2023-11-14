@@ -2,14 +2,12 @@
 
 The project is structured as follows:
 
-- **`index.html`**: The main HTML file.
-- **`styles.css`**: Contains styles for the project.
-- **`script.js`**: JavaScript file for handling dynamic behavior.
-- **`Pages/`**: Directory containing additional pages.
-- **`README.md`**: Documentation providing an overview of the project.
+- **`index.html`**: is main HTML file.
+- **`Pages/`**: is Directory containing additional pages.
+- **`README.md`**: is the Documentation providing an overview of the project.
 
 
-### Installation
+## Installation
 
 1. Clone the repository: `git clone https://github.com/Ramkrishna2558/Login-system-task.git`
 2. Navigate to the project directory: `cd Login-system-task`

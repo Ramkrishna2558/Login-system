@@ -5,13 +5,23 @@ function toggleSidebar() {
     sidebar.style.width = sidebar.style.width === '250px' ? '0' : '250px';
     content.style.marginLeft = sidebar.style.width === '250px' ? '250px' : '0';
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const sidebar = document.getElementById('mySidebar');
+    const content = document.getElementById('mainContent');
+
+    sidebar.style.width = '0';
+    content.style.marginLeft = '0';
+
+   
+});
+
 let logoutButton;
 document.addEventListener("DOMContentLoaded", function() {
     const loggedInUser = localStorage.getItem("loggedInUser");
     const logoutButton = document.querySelector('#navul li:nth-child(2)'); 
 
     if (loggedInUser) {
-        console.log("Username retrieved:", loggedInUser);
 
         displayUsernameInMainContent(loggedInUser);
 
@@ -35,13 +45,12 @@ function displayUsernameInMainContent(username) {
 
     const usernameParagraph = document.createElement('p');
 
-    usernameParagraph.innerHTML = `Welcome, ${username}!`;
+    usernameParagraph.innerHTML = `Welcome, ${username}`;
 
     mainContent.appendChild(usernameParagraph);
 }
 
 function hideLoginAndRegisterButtons() {
-    console.log("Hiding buttons");
 
     const loginButton = document.querySelector('#navul li:nth-child(1)');
 
@@ -77,3 +86,23 @@ if(!loggedInUser)
 
 }
 }
+
+
+// added quote loading below
+document.addEventListener('DOMContentLoaded', function () {
+    const quotes = [
+      "The only way to do great work is to love what you do. - Steve Jobs",
+      "Don't watch the clock; do what it does. Keep going. - Sam Levenson",
+      "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
+      "In the middle of difficulty lies opportunity. - Albert Einstein",
+      "Your time is limited, don't waste it living someone else's life. - Steve Jobs",
+    ];
+  
+    const currentDate = new Date();
+    const dayOfYear = currentDate.getFullYear() * 365 + currentDate.getMonth() * 30 + currentDate.getDate();
+    const dailyQuoteIndex = dayOfYear % quotes.length;
+  
+    const quoteTextElement = document.querySelector('.quote-text');
+    quoteTextElement.textContent = quotes[dailyQuoteIndex];
+  });
+  

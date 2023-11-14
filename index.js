@@ -1,3 +1,5 @@
+
+// function to load the sidebar using toggle 
 function toggleSidebar() {
     const sidebar = document.getElementById('mySidebar');
     const content = document.getElementById('mainContent');
@@ -5,6 +7,8 @@ function toggleSidebar() {
     sidebar.style.width = sidebar.style.width === '250px' ? '0' : '250px';
     content.style.marginLeft = sidebar.style.width === '250px' ? '250px' : '0';
 }
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const sidebar = document.getElementById('mySidebar');
@@ -50,10 +54,8 @@ document.getElementById('login-form').addEventListener('submit', function (e) {
     const password = document.getElementById('password').value;
 
     const storedUser = localStorage.getItem(username);
-console.log(username);
     if (storedUser) {
         const userData = JSON.parse(storedUser);
-console.log(storedUser);
         if (userData.password === password) {
            
             localStorage.setItem("loggedInUser", username);
@@ -81,7 +83,6 @@ document.getElementById('registration-form').addEventListener('submit', function
         securityAnswer: securityAnswer,
     };
     localStorage.setItem(newUsername + '_securityAnswer', securityAnswer);
-    console.log(`Security answer saved for ${newUsername}: ${securityAnswer}`); // Added line
 
 
     localStorage.setItem(newUsername, JSON.stringify(newUser));
@@ -98,12 +99,9 @@ function showForgotPasswordForm() {
     document.getElementById('forgotPasswordForm').style.display = 'block';
 }
 
-
 function recoverPassword() {
     var username = document.getElementById('forgotUsername').value;
     var securityAnswer = document.getElementById('security-answer').value;
-    console.log(securityAnswer);
-    console.log(username);
 
     if (!username || !securityAnswer) {
         alert('Please enter both username and security answer.');
@@ -111,13 +109,21 @@ function recoverPassword() {
     }
 
     var storedSecurityAnswer = localStorage.getItem(username + '_securityAnswer');
-    console.log(`Stored security answer for ${username}: ${storedSecurityAnswer}`); 
+    
     if (securityAnswer === storedSecurityAnswer) {
         var newPassword = prompt('Enter a new password:');
 
         if (newPassword) {
-            localStorage.setItem(username + '_password', newPassword);
+            var storedUser = localStorage.getItem(username);
+            if (storedUser) {
+                var userData = JSON.parse(storedUser);
+                userData.password = newPassword;
+                localStorage.setItem(username, JSON.stringify(userData));
+            }
+
             alert('Password reset successful!');
+
+            window.location.href = 'index.html';
         } else {
             alert('Invalid password. Please try again.');
         }

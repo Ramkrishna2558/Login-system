@@ -11,14 +11,13 @@ body {
     background-color: #DDF2FD;
 }
 
-/* Header Styles */
+/* Header */
 header {
     background: #164863;
     color: white;
     padding: 0px;
     display: flex;
     justify-content: space-between;
-    z-index: 10;
 }
 
 
@@ -84,6 +83,7 @@ display: flex;
 
 }
 
+
 #mySidebar ul li{
     font-size: 14px;
     margin-top: 40px;
@@ -126,8 +126,12 @@ display: flex;
     transition: 0.5s ease-in-out;
 
 }
+.toggle-btn:hover {
+    background-color:#9BBEC8 ;
+    transition: 0.5s ease-in-out;
+}
 
-/* Navigation Styles */
+/* Navigation */
 
 
 #navul {
@@ -148,7 +152,7 @@ nav ul li {
     margin-right: 15px;
 }
 
-/* Container Styles */
+/* Container */
 .container {
     display: flex;
 }
@@ -188,13 +192,33 @@ ul li a:hover {
     color: #9BBEC8;
 }
 
-/* Main Content Styles */
+/* Main Content */
 main {
     flex-grow: 1;
     padding: 20px;
 }
 
-/* Footer Styles */
+
+.socialmedia {
+    margin-left: 16rem;
+    display: flex;
+}
+.socialmedia h4{
+    margin-right: 1rem;
+}
+
+#socialbutton {
+    border-radius: 12px;
+    padding: 12px;
+    border: none;
+    background: linear-gradient(to right, #427D9D, #9BBEC8);
+}
+
+.hrtag {
+visibility: hidden;
+    padding: 2px;
+}
+/* Footer */
 footer {
     z-index: 2;
     position: fixed;
@@ -202,7 +226,51 @@ footer {
     background-color: #164863;
     color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 8px;
     justify-content: center;
     width: 100%;
+}
+
+
+/* quote card  */
+.quote-card {
+    width: 300px;
+    padding: 20px;
+    background-color: #9BBEC8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #f0f0f0;
+    text-align: center;
+    margin-left: 15rem;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    transition: opacity 1s ease, transform 0.5s ease;
+}
+  
+  .quote-card h2 {
+    color: #333;
+  }
+  
+  .quote-text {
+    color: #555;
+    font-style: italic;
+    margin-top: 10px;
+  }
+  
+
+@media only screen and (max-width: 768px) {
+    .Maincontent p {
+        font-weight: bolder;
+        font-size: 25px;
+        display: flex;
+        width: 80%;
+    }
+    .quote-card {
+       width: 200px;
+        margin-left: 4rem;
+        
+      }
+      .socialmedia {
+        margin-left: 5rem;
+    }
+
 }
