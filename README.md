@@ -1,4 +1,4 @@
-# Login-system-task
+# Login-system
 
 The project is structured as follows:
 
